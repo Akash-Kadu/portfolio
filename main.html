@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-txt">
+                <p>Web Developer</p>
+                <h1>Hi, I am Akash Kadu !</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------about---------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est impedit dolorem minus asperiores
+                        atque similique neque nihil placeat numquam voluptates non illum porro, nam sunt nulla
+                        cupiditate velit vitae deleniti.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Java</span><br>OOPS</li>
+                            <li><span>Python</span><br>OOPS</li>
+                            <li><span>Front-end</span><br>HTML | CSS | JS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>PugArch Technologies</span><br>FrontEnd Devoloper <br> HTML | CSS | JS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech ECE Priyadarshini Bhagwati College of Engineering</span><br>Priyadarshini
+                                Bhagwati College of Engineering</li>
+                            <li><span>HSC</span><br>Baba Nanak S. H. Jr. College</li>
+                            <li><span>SSC</span><br>Prashant High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------portfolio------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------footer---------------- -->
+     <div class="footer">
+    <footer id="footer">
+        <img src="images/logo.png" id="footlogo">
+        <a href="#" id="center-txt">Go To Top</a>
+        <ul>
+            <li><a href="https://www.instagram.com/akash_kadu_0?igsh=MXZIZm9qbWQzNjhnYw=="><img src="images/insta.png" id="social-media"></a></li>
+            <li><a href=""><img src="images/in.png" id="social-media"></a></li>
+            <li><a href=""><img src="images/github2.png" id="social-media"></a></li>
+        </ul>
+    </footer></div>
+</body>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</html>
